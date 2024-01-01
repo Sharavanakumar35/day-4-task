@@ -2,7 +2,7 @@
 
 // 1.a Print Odd numbers in an array?
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+console.log("1. a) Print Odd numbers in an array?");
 (function(arr) {
     arr.forEach(function(num) {
       if (num % 2 !== 0) {
@@ -18,7 +18,7 @@ const titleCapsArray = (function(arr) {
       return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     });
 })(stringArray);
-
+console.log("1. b) Convert all the strings to title caps in a string array");
 console.log(titleCapsArray);
 
 
@@ -27,6 +27,7 @@ console.log(titleCapsArray);
 const arraySum = (function(arr) {
     return arr.reduce((sum, num) => sum + num, 0)
 })(numbers);
+console.log("1. c) Sum of all numbers in an array");
 console.log(arraySum);
 
 // 1.d Return all the prime numbers in an array
@@ -39,7 +40,8 @@ const primeNumbers = (function(arr) {
       }
       return num > 1;
     });
-  })(numbers);
+})(numbers);
+console.log("1. d) Return all the prime numbers in an array");
 console.log(primeNumbers);
 
 // 1. e Return all the palindromes in an array
@@ -49,7 +51,8 @@ const palindromeArray = (function(arr) {
       return str === reversed;
     });
 })(stringArray);
-  console.log(palindromeArray);
+console.log("1. e) Return all the palindromes in an array");
+console.log(palindromeArray);
 
 // 1. f Return median of two sorted arrays of the same size.
 let oneToFive = [2, 5, 3, 1, 4];
@@ -61,6 +64,7 @@ const medianValue = (function(arr1, arr2) {
     
     return length%2===0 ? (mergedArray[mid-1] + mergedArray[mid])/2: mergedArray[mid];
 })(oneToFive, FiveToTen);
+console.log("1. f) Return median of two sorted arrays of the same size.");
 console.log(medianValue);
 
 // 1. g Remove duplicates from an array
@@ -77,14 +81,15 @@ const removeDuplicates = (function(arr) {
 
   return uniqueArray;
 })(duplicateArray);
-
+console.log("1. g) Remove duplicates from an array");
 console.log(removeDuplicates);
 
 // 1. h Rotate an array by k times
 
 const rotateByKTimes = (function(arr, k) {
-    let k = k % arr.length;
-    return arr.slice(0, k).concat(arr.slice(k));
-})(numbers);
-  
+    k = k % arr.length;
+    return arr.slice(k).concat(arr.slice(0, k));
+})(numbers, 3);
+ 
+console.log("1. h) Rotate an array by k times");
 console.log(rotateByKTimes);
